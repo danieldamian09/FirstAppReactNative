@@ -1,9 +1,8 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
-import {Text, View, Button} from 'react-native';
+import {Text, View, TouchableOpacity} from 'react-native';
 
 const ContadorScreen = () => {
-
   const [contador, setContador] = useState(10);
 
   return (
@@ -21,10 +20,14 @@ const ContadorScreen = () => {
         Contador: {contador}
       </Text>
 
-      <Button
-        title="Aumentar"
-        onPress={() => setContador(contador + 1)}
-      />
+      <TouchableOpacity onPress={() => setContador(contador + 1)}>
+        <View style={{
+          backgroundColor: '#00ff00',
+          borderRadius: 100,
+        }}>
+          <Text>Click me !!!!!</Text>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };
