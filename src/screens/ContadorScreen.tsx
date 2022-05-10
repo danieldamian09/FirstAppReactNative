@@ -9,9 +9,9 @@ const ContadorScreen = () => {
     <View style={styles.container}>
       <Text style={styles.title}>Contador: {contador}</Text>
 
-      <Fab
-        title= "+1"
-      />
+      <Fab title="+1" onPress={() => setContador(contador + 1)} />
+
+      <Fab title="-1" position="bl" onPress={() => setContador(contador - 1)} />
 
       {/* <TouchableOpacity style={styles.fabLocationBL} onPress={() => setContador(contador - 1)}>
         <View style={styles.fab}>

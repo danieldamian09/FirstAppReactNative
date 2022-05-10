@@ -3,13 +3,15 @@ import {Text, View, TouchableOpacity, StyleSheet} from 'react-native';
 
 interface Props {
   title: string;
+  position?: 'br' | 'bl';
+  onPress: () => void;
 }
 
-const Fab = ({title}: Props) => {
+const Fab = ({title, onPress, position= 'br'}: Props) => {
   return (
     <TouchableOpacity
       style={styles.fabLocationBR}
-      onPress={() => console.log('Click')}>
+      onPress={onPress}>
       <View style={styles.fab}>
         <Text style={styles.fabText}>{title}</Text>
       </View>
